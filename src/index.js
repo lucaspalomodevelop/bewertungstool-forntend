@@ -7,7 +7,7 @@ app.use("/static", express.static(path.join(__dirname, "..", "site")));
 
 app.get("/", function (req, res) {
   res.sendFile(
-    path.join(__dirname, "..", "site", "html", "willcome", "index.html")
+    path.join(__dirname, "..", "site", "html", "welcome", "index.html")
   );
 });
 

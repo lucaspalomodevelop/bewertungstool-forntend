@@ -1,3 +1,6 @@
 .container-content {
-    display:flex
+    display:flex;
+    gap: 24px;
+    justify-content: center;
+    padding:20px;
 }

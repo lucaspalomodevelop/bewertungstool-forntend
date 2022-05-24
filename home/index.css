@@ -38,6 +38,10 @@ a {
 }
 
 .container-entries {
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
+.caption {
+    text-align: center;
+    padding: 20px 0;
+}

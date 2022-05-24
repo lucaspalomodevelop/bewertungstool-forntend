@@ -1,0 +1,233 @@
+endpunkte:
+
+	
+	prüflingsmanagement (/api/pruefling/<ID>):
+		- erstellen							POST
+		- alle prüflingsdaten holen			GET
+		- update							UPDATE
+		
+		if <ID> == null: Hole alle Prüflinge
+		
+	/api/noten//<prüfling-id>
+	notenmanagement:
+		- Hole alle Noten für Prüfling 		GET
+		- Setze Noten für Prüfling			UPDATE
+		
+	
+JSON:
+
+	Prüfling.json:
+	
+	{
+		prueflingsID:
+		name:
+		vorname:
+		ausbildungsbetrieb:
+		
+		wiederholer: 
+		
+		termine : {
+			AB1:
+			AB2:
+			muendliche:
+		}
+		
+	}
+	
+	Gewichtungen.json
+	
+	// zeigt prüflingsunabhängig alle gewichtungen der einzelnen
+	// teilbereiche an (und notenspiegel / prüfungsdurchschnitt)
+	
+	{
+		ga_1: {
+			handlungssritt_max_punkte: 25,
+			durchschnitt: 0
+			summe: 100
+			spiegel: [0,0,0,0,0,0]
+		}
+		ga_2: {
+			handlungssritt_max_punkte: 25,
+			durchschnitt: 0
+			summe: 100
+			spiegel: [0,0,0,0,0,0]
+		}
+		gesamt_teil_b: {
+			fachqualifikation: {
+				max_punkte: 100
+				gewichtung: 40
+				durchschnitt: 0
+			}
+			kernqualifikation: {
+				max_punkte: 100
+				gewichtung: 40
+				durchschnitt: 0
+			}
+			wiso: {
+				max_punkte: 100
+				gewichtung: 20
+				durchschnitt: 0
+			}
+			spiegel: [0,0,0,0,0,0]
+		}
+		gesamt_teil_a: {
+			dokumentation: {
+				max_punkte: 100
+				gewichtung: 50
+				durchschnitt: 0
+				bewertungsbogen: {
+					formalgestaltung: {
+						maxpunkte: 
+						teilbereiche: [
+							{
+								id:
+								beschreibung:
+								maxpunkte:
+							},
+							...
+						]
+					}
+					beschreibung_auftrag: {
+						maxpunkte: 
+						teilbereiche: [
+							{
+								id:
+								beschreibung:
+								maxpunkte:
+							},
+							...
+						]
+					},
+					beschreibung_prozess: {
+						maxpunkte: 
+						teilbereiche: [
+							{
+								id:
+								beschreibung:
+								maxpunkte:
+							},
+							...
+						]
+					},
+					praxis_unterlagen: {
+						maxpunkte: 
+						teilbereiche: [
+							{
+								id:
+								beschreibung:
+								maxpunkte:
+							},
+							...
+						]
+					},
+				}
+			}
+			präsentation: {
+				max_punkte: 100
+				gewichtung: 25
+				durchschnitt: 0
+			}
+			fachgespräch: {
+				max_punkte: 100
+				gewichtung: 25
+				durchschnitt: 0
+			}
+			spiegel: [0,0,0,0,0,0]
+		}
+	}
+	
+	// datensatz aller noten eines einzelnen prüflings
+	
+	Noten.json:
+	
+	{
+		AB1 
+		{
+			gesamt:
+		},
+		
+		AB2
+		{
+			ga1_gesamt: 
+			ga2_gesamt:
+			wiso_gesamt:
+			bestanden: boolean
+			gesamt:
+		}
+		projektdokumentation: {
+			gesamt:
+			formalgestaltung: {
+				punkte: 
+				teilbereiche: [
+					{
+						id:
+						beschreibung:
+						punkte:
+					},
+					...
+				]
+			},
+			beschreibung_auftrag: {
+				punkte: 
+				teilbereiche: [
+					{
+						id:
+						beschreibung:
+						punkte:
+					},
+					...
+				]
+			},
+			beschreibung_prozess: {
+				punkte: 
+				teilbereiche: [
+					{
+						id:
+						beschreibung:
+						punkte:
+					},
+					...
+				]
+			},
+			praxis_unterlagen: {
+				punkte: 
+				teilbereiche: [
+					{
+						id:
+						beschreibung:
+						punkte:
+					},
+					...
+				]
+			},
+		},
+		muendliche_pruefung: {
+			Fachgespräch: {
+				bereich_1: {
+					beschreibung: "Thematische Durchdringung etc ..."
+					punkte:
+				},
+				bereich_2: {
+					beschreibung: "Thematische Durchdringung etc ..."
+					punkte:
+				},
+				themen: [
+					{
+						beschreibung:
+						wichtung:
+						note: <1-6>
+						gesamt:
+					},
+					{
+						beschreibung:
+						wichtung:
+						note: <1-6>
+						gesamt:
+					},
+					....
+				]
+				gesamt:
+			}
+		}
+	}
+		

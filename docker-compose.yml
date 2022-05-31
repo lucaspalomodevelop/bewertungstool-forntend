@@ -5,4 +5,4 @@ services:
     ports: 
       - "8081:80"
     volumes:
-      - ./:/usr/local/apache2/htdocs/
+      - ./app/:/usr/local/apache2/htdocs/

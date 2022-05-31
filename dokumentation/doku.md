@@ -1,8 +1,8 @@
 # Dokumentation - BewertungsToll-Frontend
 
+## Anfoderungen:
 
-## Anfoderungen: 
-Das Ziel der Anwendung ist die erleichertung der Notenübersicht für die Schriftliche und Mündliche Prüfungen der 
+Das Ziel der Anwendung ist die erleichertung der Notenübersicht für die Schriftliche und Mündliche Prüfungen der
 
 ## Techstack
 
@@ -18,6 +18,4 @@ Das Ziel der Anwendung ist die erleichertung der Notenübersicht für die Schrif
 
 endpoint.js ist eine Klasse zur verwaltung der Schnitstellen um nicht immer umständliche Fetch Anfragen schreiben zu müssen und die adresse der API global festlegen zu könnnen
 
-## Ordnerstruktur: 
-
-
+## Ordnerstruktur:
